@@ -75,7 +75,7 @@ class PipelineStack(cdk.Stack):
             synth_action=pipelines.SimpleSynthAction.standard_npm_synth(
                 source_artifact=source_artifact,
                 cloud_assembly_artifact=cloud_assembly_artifact,
-                install_command='npm install -g aws-cdk && pip3 install -r requirements.txt',
+                install_command='npm install -g aws-cdk@1.109.0 && pip3 install -r requirements.txt',
                 # TODO: Automate unit testing
                 # build_command='pytest unit_tests',
                 role_policy_statements=[
